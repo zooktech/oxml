@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = '1.6'
+group = 'oxml'
+version = '0.1'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.slf4j:slf4j-api:1.6.4',
+		'org.slf4j:slf4j-log4j12:1.6.4',
+		'log4j:log4j:1.2.16',
+		'joda-time:joda-time:2.1'
+		// 'com.google.guava:guava:11.0',
+	testCompile 'junit:junit:4.10',
+		'commons-io:commons-io:2.1'
+		// 'org.mockito:mockito-all:1.8.5'
+		// 'org.concordion:concordion:1.4.2'
+}
