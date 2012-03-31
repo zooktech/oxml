@@ -67,11 +67,26 @@ public class OxmlParserTests {
 		assertEquals(new TopLevel("myattr", asList(new SecondLevel())), 
 				parse("<top-level attr=\"myattr\"><second-level><dont-know-about-this>Nope!</dont-know-about-this></second-level></top-level>"));
 	}
-	
+
+	/**
+	 * Note that any whitespace before the XML declaration will cause an error. It's not legal and the Stax parser say no. 
+	 */	
 	@Test
 	public void whiteSpaceIsIgnored() throws XMLStreamException {
 		assertEquals(new TopLevel("myattr", asList(new SecondLevel())), 
 				parse("  <top-level attr=\"myattr\">\t\n <second-level  >\n <dont-know-about-this>Nope!</dont-know-about-this></second-level>\t  </top-level>  "));
+	}
+	
+	@Test
+	public void whitespaceBeforeXmlDeclarationIsIgnored() throws XMLStreamException {
+		assertEquals(new TopLevel("myattr"),
+				parse("  <?xml version = \"1.0\" ?><top-level attr=\"myattr\"></top-level>"));
+	}
+	
+	@Test
+	public void dtdIsIgnored() throws XMLStreamException {
+		assertEquals(new TopLevel("myattr"),
+				parse("<!DOCTYPE top-level SYSTEM \"MY.DTD\"><top-level attr=\"myattr\"></top-level>"));
 	}
 	
 	
