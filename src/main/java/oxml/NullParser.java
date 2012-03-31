@@ -17,7 +17,7 @@ public class NullParser extends AbstractElementParser<Void> {
 	
 	@Override
 	public void processChild(XMLEventReader reader) throws XMLStreamException {
-		//NULL_PARSER.parse(reader);
+		NULL_PARSER.parse(reader);
 	}
 
 }

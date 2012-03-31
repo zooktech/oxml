@@ -6,8 +6,6 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import javax.xml.stream.XMLEventReader;
@@ -61,7 +59,7 @@ public class OxmlParserTests {
 	@Test
 	public void unknownSecondLevelChildrenAreIgnored() throws XMLStreamException {
 		assertEquals(new TopLevel("myattr", asList(new SecondLevel("One"))), 
-				parse("<top-level attr=\"myattr\"><second-level>One</second-level><dont-know-this-one><nor-this>Lost!</nor-this></dont-know-this-one></top-level>"));
+				parse("<top-level attr=\"myattr\"><second-level>One</second-level><dont-know-this-one><nor-this><nope>Lost!</nope></nor-this></dont-know-this-one></top-level>"));
 	}
 	
 	@Test
