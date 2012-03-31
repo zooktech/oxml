@@ -3,11 +3,13 @@ apply plugin: 'eclipse'
 
 sourceCompatibility = '1.6'
 group = 'oxml'
-version = '0.2'
+version = '0.2.1'
 
 repositories {
 	mavenCentral()
 }
+
+jar.dependsOn test
 
 dependencies {
 	compile 'org.slf4j:slf4j-api:1.6.4',
