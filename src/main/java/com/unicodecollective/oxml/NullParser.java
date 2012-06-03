@@ -1,4 +1,4 @@
-package oxml;
+package com.unicodecollective.oxml;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamException;

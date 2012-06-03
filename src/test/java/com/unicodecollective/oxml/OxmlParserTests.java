@@ -1,4 +1,4 @@
-package oxml;
+package com.unicodecollective.oxml;
 
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
@@ -14,6 +14,9 @@ import javax.xml.stream.XMLStreamException;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+
+import com.unicodecollective.oxml.AbstractElementParser;
+import com.unicodecollective.oxml.OxmlParser;
 
 public class OxmlParserTests {
 

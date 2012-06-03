@@ -1,4 +1,4 @@
-package oxml;
+package com.unicodecollective.oxml;
 
 import java.util.HashMap;
 import java.util.Iterator;

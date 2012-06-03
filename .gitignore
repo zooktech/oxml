@@ -1,6 +1,11 @@
 build
-bin
+.gradle
+# Eclipse files: #
 .project
 .settings
 .classpath
-.gradle
+bin
+# IntelliJ Idea Files: #
+*.iml
+*.iws
+*.ipr
