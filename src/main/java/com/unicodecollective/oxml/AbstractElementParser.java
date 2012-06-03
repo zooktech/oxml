@@ -59,15 +59,15 @@ public abstract class AbstractElementParser<T> implements ElementParser<T> {
 		NULL_PARSER.parse(reader);
 	}
 
-	private void consumeEndElement(XMLEventReader reader) throws XMLStreamException {
-		reader.nextEvent();
-	}
-
-	private boolean ignoreWhiteSpace(XMLEventReader reader) throws XMLStreamException {
+	protected boolean ignoreWhiteSpace(XMLEventReader reader) throws XMLStreamException {
 		while (reader.peek().isCharacters() && reader.peek().asCharacters().isWhiteSpace()) {
 			reader.nextEvent();
 		}
 		return true;
+	}
+
+	private void consumeEndElement(XMLEventReader reader) throws XMLStreamException {
+		reader.nextEvent();
 	}
 
 	private Map<String, String> getAttributes(StartElement startElement) {
