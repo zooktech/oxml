@@ -65,6 +65,11 @@ public abstract class AbstractElementParser<T> implements ElementParser<T> {
 		}
 		return true;
 	}
+	
+	protected String getCharacterData(XMLEventReader reader) throws XMLStreamException {
+        XMLEvent nextEvent = reader.nextEvent();
+        return nextEvent.isCharacters() ? nextEvent.asCharacters().getData() : "";
+    }
 
 	private void consumeEndElement(XMLEventReader reader) throws XMLStreamException {
 		reader.nextEvent();
