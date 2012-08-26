@@ -1,9 +1,9 @@
 oXml
 ====
 
-oXml is java library for XML object parsing based on Streaming API for XML (StAX).
+oXml is a java library for XML object parsing based on Streaming API for XML (StAX).
 
-It currently contains two key classes/interfaces:
+It currently contains three key classes/interfaces:
 - *OxmlParser*: This is the entry point class for client usage.
 - *ElementParser*: This is an interface which client users may implement to provide their own domain specific parsers. 
 - *AbstractElementParser*: This is an abstract class implementing the core ElementParser API. Client users would 
