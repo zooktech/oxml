@@ -9,6 +9,11 @@ It currently contains three key classes/interfaces:
 - *AbstractElementParser*: This is an abstract class implementing the core ElementParser API. Client users would 
    normally extend this class and override methods to provide custom parsing behaviour as required.
 
+Motivation
+----------
+
+TODO
+
 Usage
 -----
 
